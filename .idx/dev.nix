@@ -5,6 +5,8 @@
   channel = "stable-24.11"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
+    pkgs.git
+    pkgs.openssh
     pkgs.nodejs_22
     pkgs.zulu
   ];
