@@ -1,6 +1,16 @@
+"use client";
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export function Hero() {
   return (
@@ -31,10 +41,30 @@ export function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-14 px-10 rounded-full text-lg font-extrabold shadow-[0_0_20px_rgba(123,58,237,0.3)] transition-all hover:scale-105">
-            Explore Our Stack
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-14 px-10 rounded-full text-lg font-extrabold shadow-[0_0_20px_rgba(123,58,237,0.3)] transition-all hover:scale-105">
+                Explore Our Stack
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[600px] bg-card border-border">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold">Enterprise Stack Explorer</DialogTitle>
+                <DialogDescription className="text-muted-foreground">
+                  Our comprehensive technology ecosystem designed for 99.9999999% reliability.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="py-20 flex flex-col items-center justify-center border-2 border-dashed border-border rounded-3xl bg-secondary/10">
+                <div className="p-4 bg-primary/10 rounded-full mb-4">
+                  <Sparkles className="w-8 h-8 text-primary" />
+                </div>
+                <p className="text-foreground font-medium">Stack architecture visualization is being finalized.</p>
+                <p className="text-sm text-muted-foreground mt-2">Check back soon for the interactive breakdown.</p>
+              </div>
+            </DialogContent>
+          </Dialog>
+          
           <Button size="lg" variant="outline" className="h-14 px-10 rounded-full text-lg font-extrabold border-border hover:bg-white/5 backdrop-blur-sm transition-all text-foreground">
             Book a Demo
           </Button>
