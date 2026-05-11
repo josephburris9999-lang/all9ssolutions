@@ -1,3 +1,40 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract enterprise network",
+      "imageUrl": "https://picsum.photos/seed/all9s-hero/1920/1080",
+      "imageHint": "enterprise network"
+    },
+    {
+      "id": "partner-1",
+      "description": "Tech Partner 1",
+      "imageUrl": "https://picsum.photos/seed/partner1/200/100",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "partner-2",
+      "description": "Tech Partner 2",
+      "imageUrl": "https://picsum.photos/seed/partner2/200/100",
+      "imageHint": "corporate logo"
+    },
+    {
+      "id": "partner-3",
+      "description": "Tech Partner 3",
+      "imageUrl": "https://picsum.photos/seed/partner3/200/100",
+      "imageHint": "minimalist logo"
+    },
+    {
+      "id": "partner-4",
+      "description": "Tech Partner 4",
+      "imageUrl": "https://picsum.photos/seed/partner4/200/100",
+      "imageHint": "abstract logo"
+    },
+    {
+      "id": "partner-5",
+      "description": "Tech Partner 5",
+      "imageUrl": "https://picsum.photos/seed/partner5/200/100",
+      "imageHint": "modern logo"
+    }
+  ]
 }
