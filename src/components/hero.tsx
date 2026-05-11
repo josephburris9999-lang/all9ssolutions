@@ -31,7 +31,7 @@ export function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 rounded-full text-lg font-extrabold shadow-[0_0_20px_rgba(97,31,186,0.3)] transition-all hover:scale-105">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 rounded-full text-lg font-extrabold shadow-[0_0_20px_rgba(123,58,237,0.3)] transition-all hover:scale-105">
             Explore Our Stack
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
