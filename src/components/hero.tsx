@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#0a0c10]">
       {/* Dynamic Background Elements */}
       <div className="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] pointer-events-none animate-pulse" style={{ animationDelay: '1s' }} />
       
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
@@ -22,7 +22,7 @@ export function Hero() {
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight mb-8 fade-in-up text-white leading-[1.1]">
           Modern Solutions for <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-primary bg-[length:200%_auto] animate-gradient">Complex Enterprises</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/60 to-primary bg-[length:200%_auto] animate-gradient">Complex Enterprises</span>
         </h1>
         
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground/90 mb-12 fade-in-up font-medium" style={{ animationDelay: '0.2s' }}>
@@ -31,7 +31,7 @@ export function Hero() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 rounded-full text-lg font-extrabold shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-all hover:scale-105">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white h-14 px-10 rounded-full text-lg font-extrabold shadow-[0_0_20px_rgba(97,31,186,0.3)] transition-all hover:scale-105">
             Explore Our Stack
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>

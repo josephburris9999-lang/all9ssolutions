@@ -10,25 +10,25 @@
     --card-foreground: 220 10% 98%;
     --popover: 220 20% 10%;
     --popover-foreground: 220 10% 98%;
-    --primary: 271 76% 53%;
+    --primary: 266 71% 43%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 15% 15%;
     --secondary-foreground: 220 10% 98%;
     --muted: 220 10% 20%;
     --muted-foreground: 220 5% 65%;
-    --accent: 271 76% 53%;
+    --accent: 266 71% 43%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 15% 20%;
     --input: 220 15% 20%;
-    --ring: 271 76% 53%;
+    --ring: 266 71% 43%;
     --radius: 0.75rem;
-    --chart-1: 271 76% 53%;
-    --chart-2: 280 65% 60%;
-    --chart-3: 290 55% 70%;
-    --chart-4: 300 45% 80%;
-    --chart-5: 310 35% 90%;
+    --chart-1: 266 71% 43%;
+    --chart-2: 266 60% 50%;
+    --chart-3: 266 50% 60%;
+    --chart-4: 266 40% 70%;
+    --chart-5: 266 30% 80%;
   }
 }
 
@@ -39,8 +39,8 @@
   body {
     @apply bg-background text-foreground font-body;
     background-image: 
-      radial-gradient(at 0% 0%, hsla(271, 76%, 53%, 0.05) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, hsla(271, 76%, 53%, 0.05) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, hsla(266, 71%, 43%, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(266, 71%, 43%, 0.05) 0px, transparent 50%);
     background-attachment: fixed;
   }
   h1, h2, h3, h4, h5, h6 {
