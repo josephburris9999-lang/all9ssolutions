@@ -33,45 +33,54 @@ const products = [
 
 export function Services() {
   return (
-    <section id="services" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-24 bg-background relative overflow-hidden">
+      {/* Decorative Gradient */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">World-Class Stack</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <Badge variant="outline" className="mb-4 border-primary/30 text-primary px-4 py-1">OUR ECOSYSTEM</Badge>
+          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">World-Class Stack</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Engineered for high-availability, scalability, and security. Choose the tier that matches your global footprint.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product, idx) => (
-            <Card key={idx} className="bg-card border-border hover:border-primary/50 transition-all duration-300 group">
-              <CardHeader>
-                <div className="mb-4 p-3 bg-primary/5 rounded-2xl w-fit group-hover:bg-primary/10 transition-colors">
+            <Card key={idx} className="bg-card/50 backdrop-blur-md border-border/50 hover:border-primary/50 transition-all duration-500 group relative overflow-hidden shadow-xl">
+              <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
+                {product.icon}
+              </div>
+              <CardHeader className="relative">
+                <div className="mb-6 p-4 bg-primary/10 rounded-2xl w-fit group-hover:bg-primary/20 transition-all group-hover:scale-110">
                   {product.icon}
                 </div>
-                <Badge variant="secondary" className="w-fit mb-2 bg-primary/10 text-primary border-none">{product.tier}</Badge>
-                <CardTitle className="text-2xl font-bold mb-2">{product.title}</CardTitle>
-                <CardDescription className="text-muted-foreground leading-relaxed">
+                <Badge variant="secondary" className="w-fit mb-3 bg-primary/10 text-primary border-none font-bold px-3">{product.tier}</Badge>
+                <CardTitle className="text-2xl font-black mb-3">{product.title}</CardTitle>
+                <CardDescription className="text-muted-foreground/80 leading-relaxed text-sm">
                   {product.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
+              <CardContent className="relative">
+                <div className="space-y-4">
                   {product.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex items-center gap-2 text-sm">
-                      <Check className="w-4 h-4 text-primary" />
+                    <div key={fIdx} className="flex items-center gap-3 text-sm font-medium">
+                      <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center">
+                        <Check className="w-3 h-3 text-primary" />
+                      </div>
                       <span>{feature}</span>
                     </div>
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="flex flex-col items-start gap-4">
-                <div className="pt-4 border-t border-border w-full">
-                  <span className="text-3xl font-bold">{product.price}</span>
-                  <span className="text-muted-foreground text-sm">/month</span>
+              <CardFooter className="flex flex-col items-start gap-6 relative pt-8">
+                <div className="pt-6 border-t border-border/50 w-full flex items-baseline gap-1">
+                  <span className="text-4xl font-black text-white">{product.price}</span>
+                  <span className="text-muted-foreground text-xs font-bold uppercase tracking-widest">/ Month</span>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12">
-                  Configure Now
+                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-black h-14 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+                  Deploy Infrastructure
                 </Button>
               </CardFooter>
             </Card>
