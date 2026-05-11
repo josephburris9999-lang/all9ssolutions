@@ -43,10 +43,10 @@ export function ConsultationForm() {
     <section id="consultation" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto bg-card border border-border rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
-          <div className="p-8 md:p-12 bg-primary flex-1 text-white flex flex-col justify-center">
+          <div className="p-8 md:p-12 bg-primary flex-1 text-primary-foreground flex flex-col justify-center">
             <MessageSquare className="w-12 h-12 mb-6" />
             <h2 className="text-3xl font-bold mb-4">Request a Strategy Consultation</h2>
-            <p className="text-white/80 mb-8 leading-relaxed">
+            <p className="opacity-80 mb-8 leading-relaxed">
               Ready to modernize your enterprise infrastructure? Our team is standing by to help you design a solution that fits your unique scale and complexity.
             </p>
             <div className="space-y-4 text-sm font-medium">
@@ -73,9 +73,9 @@ export function ConsultationForm() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Full Name</FormLabel>
+                      <FormLabel className="text-foreground">Full Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Smith" {...field} className="bg-secondary/50 border-border" />
+                        <Input placeholder="John Smith" {...field} className="bg-secondary/50 border-border text-foreground" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -87,9 +87,9 @@ export function ConsultationForm() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Work Email</FormLabel>
+                        <FormLabel className="text-foreground">Work Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="john@company.com" {...field} className="bg-secondary/50 border-border" />
+                          <Input placeholder="john@company.com" {...field} className="bg-secondary/50 border-border text-foreground" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -100,9 +100,9 @@ export function ConsultationForm() {
                     name="company"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Company</FormLabel>
+                        <FormLabel className="text-foreground">Company</FormLabel>
                         <FormControl>
-                          <Input placeholder="Global Corp" {...field} className="bg-secondary/50 border-border" />
+                          <Input placeholder="Global Corp" {...field} className="bg-secondary/50 border-border text-foreground" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -114,11 +114,11 @@ export function ConsultationForm() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>How can we help?</FormLabel>
+                      <FormLabel className="text-foreground">How can we help?</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="Describe your enterprise challenges..." 
-                          className="min-h-[120px] bg-secondary/50 border-border" 
+                          className="min-h-[120px] bg-secondary/50 border-border text-foreground" 
                           {...field} 
                         />
                       </FormControl>
@@ -126,7 +126,7 @@ export function ConsultationForm() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12 rounded-full">
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-12 rounded-full">
                   <Send className="w-4 h-4 mr-2" />
                   Submit Request
                 </Button>

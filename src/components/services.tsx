@@ -40,7 +40,7 @@ export function Services() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <Badge variant="outline" className="mb-4 border-primary/30 text-primary px-4 py-1">OUR ECOSYSTEM</Badge>
-          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">World-Class Stack</h2>
+          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight text-foreground">World-Class Stack</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Engineered for high-availability, scalability, and security. Choose the tier that matches your global footprint.
           </p>
@@ -57,7 +57,7 @@ export function Services() {
                   {product.icon}
                 </div>
                 <Badge variant="secondary" className="w-fit mb-3 bg-primary/10 text-primary border-none font-bold px-3">{product.tier}</Badge>
-                <CardTitle className="text-2xl font-black mb-3">{product.title}</CardTitle>
+                <CardTitle className="text-2xl font-black mb-3 text-foreground">{product.title}</CardTitle>
                 <CardDescription className="text-muted-foreground/80 leading-relaxed text-sm">
                   {product.description}
                 </CardDescription>
@@ -65,7 +65,7 @@ export function Services() {
               <CardContent className="relative">
                 <div className="space-y-4">
                   {product.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex items-center gap-3 text-sm font-medium">
+                    <div key={fIdx} className="flex items-center gap-3 text-sm font-medium text-foreground/80">
                       <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center">
                         <Check className="w-3 h-3 text-primary" />
                       </div>
@@ -76,10 +76,10 @@ export function Services() {
               </CardContent>
               <CardFooter className="flex flex-col items-start gap-6 relative pt-8">
                 <div className="pt-6 border-t border-border/50 w-full flex items-baseline gap-1">
-                  <span className="text-4xl font-black text-white">{product.price}</span>
+                  <span className="text-4xl font-black text-foreground">{product.price}</span>
                   <span className="text-muted-foreground text-xs font-bold uppercase tracking-widest">/ Month</span>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-white font-black h-14 rounded-xl shadow-lg transition-all active:scale-[0.98]">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-black h-14 rounded-xl shadow-lg transition-all active:scale-[0.98]">
                   Deploy Infrastructure
                 </Button>
               </CardFooter>
