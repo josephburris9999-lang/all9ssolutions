@@ -1,6 +1,11 @@
+
 import React from 'react';
 import Link from 'next/link';
-import { ShieldCheck, Twitter, Linkedin, Github } from 'lucide-react';
+import Image from 'next/image';
+import { Twitter, Linkedin, Github } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const logo = PlaceHolderImages.find(img => img.id === 'brand-logo');
 
 export function Footer() {
   return (
@@ -8,8 +13,18 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <ShieldCheck className="w-8 h-8 text-primary" />
+            <Link href="/" className="flex items-center gap-3 mb-6">
+              <div className="relative w-8 h-8">
+                {logo && (
+                  <Image 
+                    src={logo.imageUrl} 
+                    alt="all9s Logo" 
+                    fill 
+                    className="object-contain"
+                    data-ai-hint={logo.imageHint}
+                  />
+                )}
+              </div>
               <span className="text-xl font-bold text-foreground">all9s <span className="text-primary">Solutions</span></span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">

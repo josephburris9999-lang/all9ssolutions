@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "brand-logo",
+      "description": "all9s Solutions Logo",
+      "imageUrl": "https://picsum.photos/seed/all9s-logo/200/200",
+      "imageHint": "tech logo"
+    },
+    {
       "id": "hero-bg",
       "description": "Abstract enterprise network",
       "imageUrl": "https://picsum.photos/seed/all9s-hero/1920/1080",
