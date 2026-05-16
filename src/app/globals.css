@@ -75,3 +75,130 @@
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
+
+@keyframes heroWaveDrift {
+  0%, 100% {
+    transform: translateX(-3.5%) translateY(0);
+  }
+  50% {
+    transform: translateX(3.5%) translateY(-0.75%);
+  }
+}
+
+@keyframes heroWaveShimmer {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.hero-wave-streaks {
+  animation: heroWaveDrift 22s ease-in-out infinite;
+}
+
+.hero-wave-path {
+  animation: heroWaveShimmer 7s ease-in-out infinite;
+}
+
+.hero-wave-path:nth-child(2) {
+  animation-duration: 9s;
+  animation-delay: -1.5s;
+}
+
+.hero-wave-path:nth-child(3) {
+  animation-duration: 6s;
+  animation-delay: -2s;
+}
+
+.hero-wave-path:nth-child(4) {
+  animation-duration: 8.5s;
+  animation-delay: -0.5s;
+}
+
+.hero-wave-path:nth-child(5) {
+  animation-duration: 10s;
+  animation-delay: -3s;
+}
+
+.hero-wave-path:nth-child(6) {
+  animation-duration: 7.5s;
+  animation-delay: -1s;
+}
+
+/* Subtle isometric neon grid (#783AED on charcoal #1A1A1A) — hero & About */
+.iso-neon-grid-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-color: rgba(26, 26, 26, 0.135);
+}
+
+.iso-neon-grid-layer-drift {
+  position: absolute;
+  left: -12%;
+  top: -12%;
+  width: 124%;
+  height: 124%;
+  opacity: 0.87;
+  background-image:
+    repeating-linear-gradient(
+      30deg,
+      transparent 0,
+      transparent 30px,
+      rgba(120, 58, 237, 0.098) 30px,
+      rgba(120, 58, 237, 0.098) 31px
+    ),
+    repeating-linear-gradient(
+      150deg,
+      transparent 0,
+      transparent 30px,
+      rgba(120, 58, 237, 0.098) 30px,
+      rgba(120, 58, 237, 0.098) 31px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 48px,
+      rgba(120, 58, 237, 0.063) 48px,
+      rgba(120, 58, 237, 0.063) 49px
+    );
+  background-size:
+    52px 90px,
+    52px 90px,
+    100% 100%;
+  background-position: 0 0, 0 0, 0 0;
+  animation: isoNeonGridUndulate 36s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes isoNeonGridUndulate {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(1.1%, -0.75%) scale(1.008);
+  }
+  50% {
+    transform: translate(-0.65%, 0.9%) scale(1);
+  }
+  75% {
+    transform: translate(-0.95%, -0.45%) scale(1.005);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-wave-streaks,
+  .hero-wave-path {
+    animation: none !important;
+  }
+
+  .iso-neon-grid-layer-drift {
+    animation: none !important;
+    transform: none !important;
+  }
+}
